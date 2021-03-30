@@ -2,6 +2,7 @@ import { memo } from "react";
 import styled from "styled-components";
 import Container from "../container/Container";
 import Logo from "../logo/Logo";
+import SearchForm from "../searchForm/SearchForm";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
@@ -18,6 +19,7 @@ const Header = () => {
       <Title>Libse</Title>
       <Container>
         <Logo />
+        <SearchForm />
       </Container>
     </StyledHeader>
   );

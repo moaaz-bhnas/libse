@@ -14,6 +14,7 @@ const theme = {
     default: "#333",
   },
   bg: {
+    default: "#faf9f7",
     header: "#fff",
   },
 };
