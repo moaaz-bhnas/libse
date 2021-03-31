@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Container from "../container/Container";
 import Logo from "../../components/logo/Logo";
 import SearchForm from "../../components/header/SearchForm";
+import Auth from "../../components/header/Auth";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
@@ -20,6 +21,7 @@ const Header = () => {
       <Container>
         <Logo />
         <SearchForm />
+        <Auth />
       </Container>
     </StyledHeader>
   );
