@@ -1,6 +1,6 @@
 import { memo } from "react";
 import styled from "styled-components";
-import SearchInput from "../input/SearchInput";
+import SearchInput from "./SearchInput";
 
 const StyledSearchForm = styled.form``;
 

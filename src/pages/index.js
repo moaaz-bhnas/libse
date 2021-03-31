@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "../components/header/Header";
+import Header from "../containers/header/Header";
 
 const Title = styled.h1`
   font-size: 50px;

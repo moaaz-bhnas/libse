@@ -1,6 +1,6 @@
 import { memo } from "react";
 import styled from "styled-components";
-import sizes from "../../data/sizes";
+import { sizes } from "../../utils/style";
 
 const StyledContainer = styled.div`
   max-width: ${sizes.maxWidth.default};

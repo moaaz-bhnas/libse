@@ -1,6 +1,6 @@
 import { memo } from "react";
 import styled from "styled-components";
-import fonts from "../../data/fonts";
+import { fonts } from "../../utils/style";
 
 const StyledLogo = styled.span`
   font-size: 2rem;

@@ -1,8 +1,8 @@
 import { memo } from "react";
 import styled from "styled-components";
 import Container from "../container/Container";
-import Logo from "../logo/Logo";
-import SearchForm from "../searchForm/SearchForm";
+import Logo from "../../components/logo/Logo";
+import SearchForm from "../../components/header/SearchForm";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
