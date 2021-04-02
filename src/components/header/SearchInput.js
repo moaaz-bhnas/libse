@@ -17,6 +17,12 @@ const Input = styled.input`
     color: ${(props) => props.theme.text.grey};
     font-size: 0.95rem;
   }
+
+  &:focus {
+    &::placeholder {
+      color: #999;
+    }
+  }
 `;
 
 const SearchInput = () => {

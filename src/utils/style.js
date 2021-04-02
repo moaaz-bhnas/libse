@@ -27,3 +27,11 @@ export const linkStyles = css`
   text-decoration: none;
   font-weight: 500;
 `;
+
+export const containerStyles = css`
+  max-width: ${sizes.maxWidth.default};
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+`;
