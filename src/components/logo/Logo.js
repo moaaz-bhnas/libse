@@ -6,6 +6,7 @@ const Logo = ({ width = 100 }) => {
   return (
     <Image
       src="/images/logo.png"
+      alt="Libse logo"
       width={width}
       height={width / 2}
       quality={100}

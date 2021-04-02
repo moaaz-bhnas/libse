@@ -1,9 +1,13 @@
 import { memo } from "react";
-import styled from "styled-components";
+import { useRouter } from "next/router";
+import useTranslation from "../../hooks/useTranslation";
 import { DefaultButton } from "../button/Button";
 
 const Language = () => {
-  return <DefaultButton>عربي</DefaultButton>;
+  const { locale } = useRouter();
+  const { t } = useTranslation(locale);
+
+  return <DefaultButton>{t("language")}</DefaultButton>;
 };
 
 export default memo(Language);

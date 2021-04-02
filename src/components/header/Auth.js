@@ -1,4 +1,6 @@
 import { memo } from "react";
+import { useRouter } from "next/router";
+import useTranslation from "../../hooks/useTranslation";
 import styled from "styled-components";
 import Link from "next/link";
 import { linkStyles } from "../../utils/style";
@@ -14,14 +16,17 @@ const StyledLink = styled.a`
 `;
 
 const Auth = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation(locale);
+
   return (
     <StyledAuth>
       <Link passHref href="/login">
-        <StyledLink>Log in</StyledLink>
+        <StyledLink>{t("login")}</StyledLink>
       </Link>{" "}
-      or{" "}
+      {t("or")}{" "}
       <Link passHref href="/signup">
-        <StyledLink>Create account</StyledLink>
+        <StyledLink>{t("createAccount")}</StyledLink>
       </Link>
     </StyledAuth>
   );

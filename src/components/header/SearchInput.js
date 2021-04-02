@@ -1,4 +1,6 @@
 import { memo } from "react";
+import { useRouter } from "next/router";
+import useTranslation from "../../hooks/useTranslation";
 import styled from "styled-components";
 import { sizes } from "../../utils/style";
 
@@ -26,12 +28,11 @@ const Input = styled.input`
 `;
 
 const SearchInput = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation(locale);
+
   return (
-    <Input
-      type="search"
-      aria-label="Search for a product"
-      placeholder="Search for a product"
-    />
+    <Input type="search" aria-label={t("search")} placeholder={t("search")} />
   );
 };
 

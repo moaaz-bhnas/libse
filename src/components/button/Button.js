@@ -10,7 +10,7 @@ const generateButton = (Component, props) => {
 const StyledButton = styled.button`
   font-size: 1em;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.75em;
 `;
 
