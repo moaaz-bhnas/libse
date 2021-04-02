@@ -1,10 +1,13 @@
 import { memo } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { linkStyles } from "../../utils/style";
 
 const StyledAuth = styled.p``;
 
-const StyledLink = styled.a``;
+const StyledLink = styled.a`
+  ${linkStyles}
+`;
 
 const Auth = () => {
   return (

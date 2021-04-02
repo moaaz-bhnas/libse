@@ -1,15 +1,21 @@
 import { memo } from "react";
-import styled from "styled-components";
-import { fonts } from "../../utils/style";
+import Image from "next/image";
+import PropTypes from "prop-types";
 
-const StyledLogo = styled.span`
-  font-size: 2rem;
-  font-family: ${fonts.sansSerif};
-  font-weight: 500;
-`;
+const Logo = ({ width = 100 }) => {
+  return (
+    <Image
+      src="/images/logo.png"
+      width={width}
+      height={width / 2}
+      quality={100}
+      priority={true}
+    />
+  );
+};
 
-const Logo = () => {
-  return <StyledLogo>Libse</StyledLogo>;
+Logo.propTypes = {
+  width: PropTypes.number,
 };
 
 export default memo(Logo);
