@@ -2,9 +2,13 @@ import styled from "styled-components";
 import { sizes, transitions } from "../../utils/style";
 
 const generateButton = (Component, props) => {
-  const { type = "button", children } = props;
+  const { type = "button", onClick, children } = props;
 
-  return <Component type={type}>{children}</Component>;
+  return (
+    <Component type={type} onClick={onClick}>
+      {children}
+    </Component>
+  );
 };
 
 const StyledButton = styled.button`

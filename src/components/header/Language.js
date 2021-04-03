@@ -1,13 +1,18 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "../../hooks/useTranslation";
 import { DefaultButton } from "../button/Button";
 
 const Language = () => {
-  const { locale } = useRouter();
+  const router = useRouter();
+  const { locale, pathname } = router;
   const { t } = useTranslation(locale);
 
-  return <DefaultButton>{t("language")}</DefaultButton>;
+  const handleClick = useCallback(() => {
+    router.push(pathname, pathname, { locale: locale === "ar" ? "en" : "ar" });
+  }, [locale]);
+
+  return <DefaultButton onClick={handleClick}>{t("language")}</DefaultButton>;
 };
 
 export default memo(Language);
