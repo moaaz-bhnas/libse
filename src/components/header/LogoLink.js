@@ -1,5 +1,4 @@
 import { memo } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
 import Logo from "../logo/Logo";
@@ -9,8 +8,6 @@ const StyledLink = styled.a`
 `;
 
 const LogoLink = () => {
-  const { locale } = useRouter();
-
   return (
     <Link href="/" passHref>
       <StyledLink>

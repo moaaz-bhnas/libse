@@ -1,10 +1,11 @@
 import { memo } from "react";
 import styled from "styled-components";
 import Logo from "../../components/header/LogoLink";
-import SearchForm from "../../components/header/SearchForm";
+import SearchForm from "../../components/search/Form";
 import Auth from "../../components/header/Auth";
 import Language from "../../components/header/Language";
-import { containerStyles } from "../../utils/style";
+import { containerStyles, sizes } from "../../utils/style";
+import MenuLink from "../../components/header/MenuLink";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
@@ -19,7 +20,7 @@ const Container = styled.div`
   ${containerStyles};
   display: flex;
   align-items: center;
-  height: 3.5em;
+  height: ${sizes.height.header};
 `;
 
 const Header = () => {
@@ -30,6 +31,7 @@ const Header = () => {
         <Logo />
         <SearchForm />
         <Auth />
+        <MenuLink />
         <Language />
       </Container>
     </StyledHeader>

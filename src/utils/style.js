@@ -14,6 +14,13 @@ export const sizes = {
   borderRadius: {
     default: "3em",
   },
+  height: {
+    header: "3.5em",
+  },
+};
+
+export const mediaQueries = {
+  menu: "500px",
 };
 
 export const transitions = {
