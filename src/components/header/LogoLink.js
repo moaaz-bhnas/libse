@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
 import Logo from "../logo/Logo";
-import getDirection from "../../utils/helpers/getDirection";
 
 const StyledLink = styled.a`
   margin-right: 1em;
@@ -14,7 +13,7 @@ const LogoLink = () => {
 
   return (
     <Link href="/" passHref>
-      <StyledLink dir={getDirection(locale)}>
+      <StyledLink>
         <Logo />
       </StyledLink>
     </Link>
