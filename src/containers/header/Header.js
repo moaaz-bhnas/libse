@@ -4,7 +4,7 @@ import Logo from "../../components/header/LogoLink";
 import SearchForm from "../../components/search/Form";
 import Auth from "../../components/header/Auth";
 import Language from "../../components/header/Language";
-import { containerStyles, sizes } from "../../utils/style";
+import { containerStyles, offScreen, sizes } from "../../utils/style";
 import MenuLink from "../../components/header/MenuLink";
 
 const StyledHeader = styled.header`
@@ -12,11 +12,10 @@ const StyledHeader = styled.header`
 `;
 
 const Title = styled.h1`
-  position: absolute;
-  left: -200em;
+  ${offScreen}
 `;
 
-const Container = styled.div`
+const Navigation = styled.nav`
   ${containerStyles};
   display: flex;
   align-items: center;
@@ -24,17 +23,22 @@ const Container = styled.div`
   position: relative;
 `;
 
+const NavTitle = styled.h2`
+  ${offScreen}
+`;
+
 const Header = () => {
   return (
     <StyledHeader>
       <Title>Libse</Title>
-      <Container>
+      <Navigation>
+        <NavTitle>Navigation</NavTitle>
         <Logo />
         <SearchForm />
         <Auth />
         <MenuLink />
         <Language />
-      </Container>
+      </Navigation>
     </StyledHeader>
   );
 };
