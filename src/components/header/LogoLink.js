@@ -5,7 +5,7 @@ import Logo from "../logo/Logo";
 import { mediaQueries } from "../../utils/style";
 
 const StyledLink = styled.a`
-  margin-right: 1em;
+  margin-right: 0.5em;
 
   @media screen and (max-width: ${mediaQueries.search}) {
     margin-right: 0;

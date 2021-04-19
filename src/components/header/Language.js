@@ -2,6 +2,14 @@ import { memo, useCallback } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "../../hooks/useTranslation";
 import { DefaultButton } from "../button/Button";
+import { mediaQueries } from "../../utils/style";
+import styled from "styled-components";
+
+const Container = styled.div`
+  @media screen and (max-width: ${mediaQueries.menu}) {
+    display: none;
+  }
+`;
 
 const Language = () => {
   const router = useRouter();
@@ -12,7 +20,11 @@ const Language = () => {
     router.push(pathname, pathname, { locale: locale === "ar" ? "en" : "ar" });
   }, [locale]);
 
-  return <DefaultButton onClick={handleClick}>{t("language")}</DefaultButton>;
+  return (
+    <Container>
+      <DefaultButton onClick={handleClick}>{t("language")}</DefaultButton>
+    </Container>
+  );
 };
 
 export default memo(Language);

@@ -35,7 +35,7 @@ const P = styled.p`
 
 const Dropdown = () => {
   return (
-    <StyledDropdown>
+    <StyledDropdown id="header__searchDropdown">
       <P>No recent searches</P>
     </StyledDropdown>
   );

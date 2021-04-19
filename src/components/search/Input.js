@@ -1,28 +1,23 @@
 import { memo, useCallback } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "../../hooks/useTranslation";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { mediaQueries, sizes } from "../../utils/style";
 import getDirection from "../../utils/helpers/getDirection";
 import PropTypes from "prop-types";
 
-const inputWidth = 20;
-const smallInputWidth = 3.25;
-const iconWidth = 1.25;
+const inputWidth = 16;
+const activeInputWidth = 20;
+const smallInputWidth = 3.3;
 
 const StyledInput = styled.input`
-  width: ${inputWidth}em;
+  width: ${({ active }) => (active ? activeInputWidth : inputWidth)}em;
   padding: 1em 0 1em ${smallInputWidth}em;
   border: none;
   border-radius: ${sizes.borderRadius.default};
   background-color: ${({ theme }) => theme.bg.default};
-  background-image: url("/images/search.svg");
-  background-repeat: no-repeat;
-  background-size: ${iconWidth}em ${iconWidth}em;
-  background-position-x: ${({ dir }) =>
-    dir === "ltr" ? 1 : inputWidth - iconWidth - 1}em;
-  background-position-y: 50%;
-  transition: width 0.4s;
+  transition-property: width;
+  transition-duration: 0.4s;
 
   &::placeholder {
     color: ${({ theme }) => theme.text.grey};
@@ -38,6 +33,7 @@ const StyledInput = styled.input`
   @media screen and (max-width: ${mediaQueries.search}) {
     cursor: ${({ active }) => (active ? "text" : "pointer")};
     width: ${({ active }) => (active ? "100%" : `${smallInputWidth}em`)};
+    transition-duration: 0s;
   }
 `;
 
@@ -60,6 +56,8 @@ const Input = ({ active, setActive }) => {
       dir={getDirection(locale)}
       onFocus={() => setActive(true)}
       onKeyDown={handleKeyDown}
+      aria-expanded={active}
+      aria-controls="header__searchDropdown"
     />
   );
 };

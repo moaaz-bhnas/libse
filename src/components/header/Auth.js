@@ -8,6 +8,7 @@ import { linkStyles, mediaQueries } from "../../utils/style";
 const StyledAuth = styled.p`
   margin: 0;
   margin-right: 1em;
+  flex-shrink: 0;
 
   @media screen and (max-width: ${mediaQueries.menu}) {
     display: none;

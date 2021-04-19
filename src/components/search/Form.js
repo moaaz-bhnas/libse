@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { mediaQueries } from "../../utils/style";
 import BackButton from "./BackButton";
 import Dropdown from "./Dropdown";
-import Input from "./Input";
+import InputContainer from "./InputContainer";
 
 const activeMobileStyles = css`
   position: absolute;
@@ -18,12 +18,11 @@ const StyledForm = styled.form`
   margin-right: auto;
   padding: 0 1em;
   height: 100%;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 1;
-  /* transition-property: left, right;
-  transition-duration: 0.4s; */
 
   @media screen and (max-width: ${mediaQueries.search}) {
     ${({ active }) => active && activeMobileStyles}
@@ -35,7 +34,12 @@ const Form = () => {
   const [active, setActive] = useState(false);
 
   const handleKeyDown = useCallback(({ key }) => {
-    if (key === "Escape") setActive(false);
+    if (key === "Escape") {
+      setActive(false);
+    }
+    if (key === "Enter" || key === " ") {
+      setActive(true);
+    }
   }, []);
 
   const handleClickOutside = useCallback(
@@ -55,9 +59,14 @@ const Form = () => {
   }, [formRef.current]);
 
   return (
-    <StyledForm onKeyDown={handleKeyDown} active={active} ref={formRef}>
+    <StyledForm
+      onKeyDown={handleKeyDown}
+      active={active}
+      ref={formRef}
+      onSubmit={(event) => event.preventDefault()}
+    >
       <BackButton formActive={active} setFormActive={setActive} />
-      <Input active={active} setActive={setActive} />
+      <InputContainer active={active} setActive={setActive} />
       {active && <Dropdown />}
     </StyledForm>
   );
