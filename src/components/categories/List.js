@@ -12,8 +12,8 @@ const StyledList = styled.ul`
 const List = () => {
   return (
     <StyledList>
-      {categories.map((category) => (
-        <Item key={category} category={category} />
+      {categories.map((category, index) => (
+        <Item key={index} category={category} />
       ))}
     </StyledList>
   );
