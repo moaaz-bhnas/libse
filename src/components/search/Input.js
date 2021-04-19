@@ -41,8 +41,8 @@ const Input = ({ active, setActive }) => {
   const { locale } = useRouter();
   const { t } = useTranslation(locale);
 
-  const handleKeyDown = useCallback(({ key }) => {
-    if (key === "Tab") {
+  const handleKeyDown = useCallback(({ key, shiftKey }) => {
+    if (key === "Tab" && !shiftKey) {
       setActive(false);
     }
   }, []);
