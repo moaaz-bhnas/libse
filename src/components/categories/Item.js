@@ -2,6 +2,7 @@ import { memo } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { rawLink } from "../../utils/style";
 
 const StyledItem = styled.li``;
@@ -19,10 +20,12 @@ const StyledLink = styled.a`
 `;
 
 const Item = ({ category }) => {
+  const { locale } = useRouter();
+
   return (
     <StyledItem>
       <Link href="/category" passHref>
-        <StyledLink>{category}</StyledLink>
+        <StyledLink>{category[locale]}</StyledLink>
       </Link>
     </StyledItem>
   );
