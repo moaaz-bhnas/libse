@@ -29,6 +29,9 @@ const theme = {
     header: "#fff",
   },
   border: {},
+  icon: {
+    default: "#606266",
+  },
 };
 
 export default function App({ Component, pageProps }) {

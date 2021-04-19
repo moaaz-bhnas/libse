@@ -9,6 +9,7 @@ const Logo = ({ width = 100 }) => {
       alt="Libse logo"
       width={width}
       height={width / 2}
+      layout="fixed"
       quality={100}
       priority={true}
     />

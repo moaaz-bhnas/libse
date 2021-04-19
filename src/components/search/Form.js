@@ -1,7 +1,18 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { mediaQueries } from "../../utils/style";
+import BackButton from "./BackButton";
 import Dropdown from "./Dropdown";
 import Input from "./Input";
+
+const activeMobileStyles = css`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+`;
 
 const StyledForm = styled.form`
   margin-right: auto;
@@ -11,6 +22,12 @@ const StyledForm = styled.form`
   align-items: center;
   position: relative;
   z-index: 1;
+  /* transition-property: left, right;
+  transition-duration: 0.4s; */
+
+  @media screen and (max-width: ${mediaQueries.search}) {
+    ${({ active }) => active && activeMobileStyles}
+  }
 `;
 
 const Form = () => {
@@ -39,6 +56,7 @@ const Form = () => {
 
   return (
     <StyledForm onKeyDown={handleKeyDown} active={active} ref={formRef}>
+      <BackButton formActive={active} setFormActive={setActive} />
       <Input active={active} setActive={setActive} />
       {active && <Dropdown />}
     </StyledForm>

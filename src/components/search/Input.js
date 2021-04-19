@@ -1,8 +1,8 @@
 import { memo, useCallback } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "../../hooks/useTranslation";
-import styled from "styled-components";
-import { sizes } from "../../utils/style";
+import styled, { css } from "styled-components";
+import { mediaQueries, sizes } from "../../utils/style";
 import getDirection from "../../utils/helpers/getDirection";
 import PropTypes from "prop-types";
 
@@ -22,6 +22,7 @@ const StyledInput = styled.input`
   background-position-x: ${({ dir }) =>
     dir === "ltr" ? 1 : inputWidth - iconWidth - 1}em;
   background-position-y: 50%;
+  transition: width 0.4s;
 
   &::placeholder {
     color: ${({ theme }) => theme.text.grey};
@@ -34,13 +35,9 @@ const StyledInput = styled.input`
     }
   }
 
-  @media screen and (max-width: 730px) {
-    width: ${({ active }) => (active ? inputWidth : smallInputWidth)}em;
-    cursor: pointer;
-
-    &:focus {
-      width: ${inputWidth}em;
-    }
+  @media screen and (max-width: ${mediaQueries.search}) {
+    cursor: ${({ active }) => (active ? "text" : "pointer")};
+    width: ${({ active }) => (active ? "100%" : `${smallInputWidth}em`)};
   }
 `;
 

@@ -21,6 +21,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   height: ${sizes.height.header};
+  position: relative;
 `;
 
 const Header = () => {

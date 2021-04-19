@@ -21,6 +21,7 @@ export const sizes = {
 
 export const mediaQueries = {
   menu: "500px",
+  search: "730px",
 };
 
 export const transitions = {
@@ -41,4 +42,10 @@ export const containerStyles = css`
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+`;
+
+export const rawButton = css`
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 `;

@@ -14,6 +14,7 @@ const StyledLink = styled.a`
 
     width: 3em;
     height: 3em;
+    flex-shrink: 0;
     border-radius: 0.5em;
     margin-right: 0.5em;
 
@@ -32,6 +33,7 @@ const MenuLink = () => {
           alt="Bookmarks"
           width={25}
           height={25}
+          layout="fixed"
           quality={100}
           priority={true}
         />
