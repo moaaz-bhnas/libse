@@ -17,7 +17,7 @@ const items = [
   { name: "home", href: "/", Icon: Home },
   { name: "categories", href: "/categories", Icon: Categories },
   { name: "favorites", href: "/favorites", Icon: Heart },
-  { name: "More", href: "/more", Icon: More },
+  { name: "more", href: "/more", Icon: More },
 ];
 
 const List = () => {
