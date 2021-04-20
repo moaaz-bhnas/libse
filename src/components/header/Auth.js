@@ -10,7 +10,7 @@ const StyledAuth = styled.p`
   margin-right: 1em;
   flex-shrink: 0;
 
-  @media screen and (max-width: ${mediaQueries.menu}) {
+  @media screen and (max-width: ${mediaQueries.header}) {
     display: none;
   }
 `;

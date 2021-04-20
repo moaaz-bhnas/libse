@@ -12,7 +12,7 @@ const StyledLink = styled.a`
   font-weight: 500;
   display: block;
   margin-right: 0.5em;
-  padding: 0.75em 0.5em;
+  padding: 0.85em 0.5em;
 
   &:hover {
     background-color: ${({ theme }) => theme.bg.default};
@@ -32,7 +32,7 @@ const Item = ({ category }) => {
 };
 
 Item.propTypes = {
-  category: PropTypes.string,
+  category: PropTypes.object,
 };
 
 export default memo(Item);

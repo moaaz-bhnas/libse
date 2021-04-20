@@ -4,7 +4,7 @@ import List from "../../components/categories/List";
 import { containerStyles, offScreen } from "../../utils/style";
 
 const StyledCategories = styled.nav`
-  background-color: ${({ theme }) => theme.bg.categories};
+  background-color: ${({ theme }) => theme.bg.grey2};
 `;
 
 const Title = styled.h2`

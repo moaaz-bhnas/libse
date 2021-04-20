@@ -1,11 +1,11 @@
 import { memo } from "react";
 import styled from "styled-components";
 import Logo from "../../components/header/LogoLink";
-import SearchForm from "../../components/search/Form";
+import SearchForm from "../search/Search";
 import Auth from "../../components/header/Auth";
 import Language from "../../components/header/Language";
 import { containerStyles, offScreen, sizes } from "../../utils/style";
-import MenuLink from "../../components/header/MenuLink";
+import Favorites from "../favorites/Favorites";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
@@ -19,6 +19,7 @@ const Navigation = styled.nav`
   ${containerStyles};
   display: flex;
   align-items: center;
+  justify-content: center;
   height: ${sizes.height.header};
   position: relative;
 `;
@@ -35,8 +36,8 @@ const Header = () => {
         <NavTitle>Navigation</NavTitle>
         <Logo />
         <SearchForm />
+        <Favorites />
         <Auth />
-        <MenuLink />
         <Language />
       </Navigation>
     </StyledHeader>

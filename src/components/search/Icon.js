@@ -1,13 +1,18 @@
 import { memo } from "react";
 import styled from "styled-components";
-import Image from "next/image";
 import PropTypes from "prop-types";
 import { mediaQueries } from "../../utils/style";
+import SearchIcon from "../svgs/Search";
 
 const Container = styled.div`
   position: absolute;
-  left: 11px;
+  left: 12.83px;
   cursor: text;
+
+  .searchForm_svg {
+    fill: ${({ theme }) => theme.icon.default};
+    width: 21px;
+  }
 
   @media screen and (max-width: ${mediaQueries.search}) {
     cursor: ${({ active }) => (active ? "text" : "pointer")};
@@ -17,15 +22,7 @@ const Container = styled.div`
 const Icon = ({ active }) => {
   return (
     <Container active={active}>
-      <Image
-        src="/images/search.svg"
-        alt=""
-        width={20}
-        height={20}
-        layout="fixed"
-        quality={100}
-        priority={true}
-      />
+      <SearchIcon className="searchForm_svg" />
     </Container>
   );
 };

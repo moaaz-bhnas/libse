@@ -1,9 +1,9 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { mediaQueries } from "../../utils/style";
-import BackButton from "./BackButton";
-import Dropdown from "./Dropdown";
-import InputContainer from "./InputContainer";
+import BackButton from "../../components/search/BackButton";
+import Dropdown from "../../components/search/Dropdown";
+import InputContainer from "../../components/search/InputContainer";
 
 const activeMobileStyles = css`
   position: absolute;
@@ -26,6 +26,12 @@ const StyledForm = styled.form`
 
   @media screen and (max-width: ${mediaQueries.search}) {
     ${({ active }) => active && activeMobileStyles}
+  }
+
+  @media screen and (max-width: ${mediaQueries.header}) {
+    margin-right: initial;
+    margin-left: auto;
+    padding: 0;
   }
 `;
 

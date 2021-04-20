@@ -20,7 +20,7 @@ export const theme = {
   bg: {
     default: "#F0F2F5",
     header: "#fff",
-    categories: "#d8dadd",
+    grey2: "#d8dadd",
   },
   border: {},
   icon: {
@@ -43,13 +43,13 @@ export const sizes = {
     default: "3em",
   },
   height: {
-    header: "3.5em",
+    header: "3.7em",
   },
 };
 
 export const mediaQueries = {
-  menu: "500px",
   search: "730px",
+  header: "600px",
 };
 
 export const transitions = {

@@ -6,7 +6,7 @@ import { mediaQueries } from "../../utils/style";
 import styled from "styled-components";
 
 const Container = styled.div`
-  @media screen and (max-width: ${mediaQueries.menu}) {
+  @media screen and (max-width: ${mediaQueries.header}) {
     display: none;
   }
 `;

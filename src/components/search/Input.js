@@ -8,11 +8,11 @@ import PropTypes from "prop-types";
 
 const inputWidth = 16;
 const activeInputWidth = 20;
-const smallInputWidth = 3.3;
+const smallInputWidth = 3.5;
 
 const StyledInput = styled.input`
   width: ${({ active }) => (active ? activeInputWidth : inputWidth)}em;
-  padding: 1em 0 1em ${smallInputWidth}em;
+  padding: 1.2em 0 1.2em ${smallInputWidth}em;
   border: none;
   border-radius: ${sizes.borderRadius.default};
   background-color: ${({ theme }) => theme.bg.default};
