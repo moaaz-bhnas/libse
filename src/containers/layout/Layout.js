@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Header from "../header/Header";
 import { containerStyles } from "../../utils/style";
 import Categories from "../categories/Categories";
+import Bottom from "../bottom/Bottom";
 
 const StyledLayout = styled.div``;
 
@@ -25,6 +26,8 @@ const Layout = ({ children }) => {
       <Main>
         <Container>{children}</Container>
       </Main>
+
+      <Bottom />
     </StyledLayout>
   );
 };

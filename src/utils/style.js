@@ -21,6 +21,7 @@ export const theme = {
     default: "#F0F2F5",
     header: "#fff",
     grey2: "#d8dadd",
+    grey3: "#c8c7c6",
   },
   border: {},
   icon: {

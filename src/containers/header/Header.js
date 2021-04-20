@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
+  border-bottom: 1px solid ${({ theme }) => theme.bg.grey2};
 `;
 
 const Title = styled.h1`
