@@ -12,6 +12,7 @@ const activeMobileStyles = css`
   left: 0;
   right: 0;
   background-color: #fff;
+  padding-right: 1em !important;
 `;
 
 const StyledForm = styled.form`
@@ -31,7 +32,7 @@ const StyledForm = styled.form`
   @media screen and (max-width: ${mediaQueries.header}) {
     margin-right: initial;
     margin-left: auto;
-    padding: 0;
+    padding-right: 0;
   }
 `;
 

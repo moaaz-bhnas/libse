@@ -6,6 +6,8 @@ import Auth from "../../components/header/Auth";
 import Language from "../../components/header/Language";
 import { containerStyles, offScreen, sizes } from "../../utils/style";
 import Favorites from "../favorites/Favorites";
+import useTranslation from "../../hooks/useTranslation";
+import { useRouter } from "next/router";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
@@ -29,11 +31,14 @@ const NavTitle = styled.h2`
 `;
 
 const Header = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation(locale);
+
   return (
     <StyledHeader>
-      <Title>Libse</Title>
+      <Title>{t("libse")}</Title>
       <Navigation>
-        <NavTitle>Navigation</NavTitle>
+        <NavTitle>{t("appNav")}</NavTitle>
         <Logo />
         <SearchForm />
         <Favorites />

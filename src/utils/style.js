@@ -73,6 +73,8 @@ export const containerStyles = css`
 `;
 
 export const rawButton = css`
+  font-size: 1rem;
+  font-family: inherit;
   border: none;
   background-color: transparent;
   cursor: pointer;

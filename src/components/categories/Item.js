@@ -1,14 +1,13 @@
 import { memo } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { rawLink } from "../../utils/style";
+import { rawButton } from "../../utils/style";
 
 const StyledItem = styled.li``;
 
-const StyledLink = styled.a`
-  ${rawLink};
+const Button = styled.button`
+  ${rawButton};
   font-weight: 500;
   display: block;
   margin-right: 0.5em;
@@ -24,9 +23,7 @@ const Item = ({ category }) => {
 
   return (
     <StyledItem>
-      <Link href="/category" passHref>
-        <StyledLink>{category[locale]}</StyledLink>
-      </Link>
+      <Button>{category[locale]}</Button>
     </StyledItem>
   );
 };

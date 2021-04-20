@@ -1,5 +1,8 @@
 const translations = {
   en: {
+    libse: "Libse",
+    appNav: "App Navigation",
+    categories: "Categories",
     search: "Search for a product",
     login: "Log in",
     or: "or",
@@ -7,6 +10,9 @@ const translations = {
     language: "عربي",
   },
   ar: {
+    libse: "لبس",
+    appNav: "شريط التنقل",
+    categories: "الفئات",
     search: "ابحث عن منتج",
     login: "سجل الدخول",
     or: "أو",
