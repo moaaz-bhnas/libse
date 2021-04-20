@@ -4,7 +4,7 @@ import { rawList } from "../../utils/style";
 import Home from "../svgs/Home";
 import Categories from "../svgs/Categories";
 import Heart from "../svgs/Heart";
-import More from "../svgs/More";
+import More from "../svgs/test";
 import Item from "./Item";
 
 const StyledList = styled.ul`
