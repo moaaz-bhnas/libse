@@ -8,6 +8,10 @@ const translations = {
     or: "or",
     createAccount: "Create account",
     language: "عربي",
+    home: "Home",
+    favorites: "Favorites",
+    toggleFav: "Toggle favorites panel",
+    more: "More",
   },
   ar: {
     libse: "لبس",
@@ -18,6 +22,10 @@ const translations = {
     or: "أو",
     createAccount: "أنشئ حساب",
     language: "English",
+    home: "الصفحة الرئيسية",
+    favorites: "القائمة المفضلة",
+    toggleFav: "افتح/اغلق قائمة المفضلات",
+    more: "أخرى",
   },
 };
 

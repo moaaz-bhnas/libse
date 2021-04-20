@@ -26,6 +26,8 @@ export const theme = {
   border: {},
   icon: {
     default: "#606266",
+    bottomLight: "#777677",
+    bottomDark: "#333",
   },
 };
 
@@ -55,6 +57,9 @@ export const mediaQueries = {
 
 export const transitions = {
   bg: {
+    default: ".1s",
+  },
+  stroke: {
     default: ".1s",
   },
 };

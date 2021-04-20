@@ -12,7 +12,7 @@ const More = ({ title = "more", className = "svg", style }) => {
       title={title}
       className={className}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 426.667 426.667"
+      viewBox="-50 -50 526.667 526.667"
       style={style}
     >
       <Circle cx="42.667" cy="213.333" r="42.667" />
