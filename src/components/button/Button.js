@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { sizes, transitions } from "../../utils/style";
 
 const generateButton = (Component, props) => {
-  const { type = "button", onClick, children } = props;
+  const { type = "button", children, ...rest } = props;
 
   return (
-    <Component type={type} onClick={onClick}>
+    <Component type={type} {...rest}>
       {children}
     </Component>
   );
@@ -41,9 +41,26 @@ const StyledCircleButton = styled(StyledButton)`
   align-items: center;
   border-radius: 50%;
 
-  &:hover,
-  &:focus {
+  .svg {
+    vertical-align: top;
+    width: 1.5em;
+    fill: transparent;
+    stroke: ${({ theme, active }) =>
+      active ? theme.icon.bottomDark : theme.icon.bottomLight};
+    stroke-width: ${({ active }) => (active ? 50 : 40)};
+    transition-property: stroke, stroke-width;
+    transition-duration: ${transitions.stroke.default};
+  }
+
+  &:hover {
     background-color: ${({ theme }) => theme.bg.grey2};
+  }
+
+  &[aria-expanded="true"] {
+    .svg {
+      stroke: ${({ theme }) => theme.icon.bottomDark};
+      stroke-width: 50;
+    }
   }
 `;
 

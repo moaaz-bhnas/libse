@@ -1,16 +1,11 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/favorites/Button";
 import Dropdown from "../../components/favorites/Dropdown";
-import { mediaQueries } from "../../utils/style";
+import { mediaQueries, transitions } from "../../utils/style";
 
 const StyledFavorites = styled.div`
   margin-right: 1em;
-
-  .favorites__svg {
-    width: 21px;
-    vertical-align: top;
-  }
 
   @media screen and (max-width: ${mediaQueries.header}) {
     display: none;
@@ -18,10 +13,12 @@ const StyledFavorites = styled.div`
 `;
 
 const Favorites = () => {
+  const [active, setActive] = useState(false);
+
   return (
     <StyledFavorites>
-      <Button />
-      <Dropdown />
+      <Button active={active} setActive={setActive} />
+      {active && <Dropdown />}
     </StyledFavorites>
   );
 };
