@@ -4,6 +4,7 @@ import styled from "styled-components";
 import List from "../../components/categories/List";
 import { containerStyles, mediaQueries, offScreen } from "../../utils/style";
 import useTranslation from "../../hooks/useTranslation";
+import getDirection from "../../utils/helpers/getDirection";
 
 const StyledCategories = styled.nav`
   background-color: ${({ theme }) => theme.bg.grey2};
@@ -27,7 +28,7 @@ const Categories = () => {
 
   return (
     <StyledCategories>
-      <Title>{t("categories")}</Title>
+      <Title dir={getDirection(locale)}>{t("categories")}</Title>
       <Container>
         <List />
       </Container>

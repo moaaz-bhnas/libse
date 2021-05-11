@@ -8,6 +8,7 @@ import { containerStyles, offScreen, sizes } from "../../utils/style";
 import Favorites from "../favorites/Favorites";
 import useTranslation from "../../hooks/useTranslation";
 import { useRouter } from "next/router";
+import getDirection from "../../utils/helpers/getDirection";
 
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.bg.header};
@@ -37,9 +38,9 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <Title>{t("libse")}</Title>
+      <Title dir={getDirection(locale)}>{t("libse")}</Title>
       <Navigation>
-        <NavTitle>{t("appNav")}</NavTitle>
+        <NavTitle dir={getDirection(locale)}>{t("appNav")}</NavTitle>
         <Logo />
         <SearchForm />
         <Favorites />

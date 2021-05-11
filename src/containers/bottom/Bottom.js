@@ -3,6 +3,7 @@ import { memo } from "react";
 import styled from "styled-components";
 import List from "../../components/bottom/List";
 import useTranslation from "../../hooks/useTranslation";
+import getDirection from "../../utils/helpers/getDirection";
 import { containerStyles, mediaQueries, offScreen } from "../../utils/style";
 
 const StyledBottom = styled.nav`
@@ -33,7 +34,7 @@ const Bottom = () => {
 
   return (
     <StyledBottom>
-      <Title>{t("appNav")}</Title>
+      <Title dir={getDirection(locale)}>{t("appNav")}</Title>
 
       <Container>
         <List />
