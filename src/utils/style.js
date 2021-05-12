@@ -1,6 +1,18 @@
 import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: .95rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: .9rem;
+    }
+  }
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #333;
