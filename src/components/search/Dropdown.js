@@ -1,5 +1,7 @@
+import { useRouter } from "next/router";
 import { memo } from "react";
 import styled from "styled-components";
+import useTranslation from "../../hooks/useTranslation";
 import { sizes } from "../../utils/style";
 
 const formBorderRadius = "0 0 0.5em 0.5em";
@@ -34,9 +36,12 @@ const P = styled.p`
 `;
 
 const Dropdown = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation(locale);
+
   return (
     <StyledDropdown id="header__searchDropdown">
-      <P>No recent searches</P>
+      <P>{t("noRecentSearches")}</P>
     </StyledDropdown>
   );
 };

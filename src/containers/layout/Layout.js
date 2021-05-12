@@ -5,12 +5,11 @@ import styled from "styled-components";
 import Header from "../header/Header";
 import { containerStyles } from "../../utils/style";
 import Bottom from "../bottom/Bottom";
+import Categories from "../categories/Categories";
 
 const StyledLayout = styled.div``;
 
-const Main = styled.main`
-  padding: 1em;
-`;
+const Main = styled.main``;
 
 const Container = styled.div`
   ${containerStyles}
@@ -22,6 +21,7 @@ const Layout = ({ children }) => {
   return (
     <StyledLayout dir={getDirection(locale)}>
       <Header />
+      <Categories />
 
       <Main>
         <Container>{children}</Container>

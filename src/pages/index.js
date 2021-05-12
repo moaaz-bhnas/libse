@@ -1,3 +1,4 @@
+import CategoriesGrid from "../containers/categoriesGrid/CategoriesGrid";
 import Layout from "../containers/layout/Layout";
 import { connectToDatabase } from "../db";
 
@@ -10,5 +11,9 @@ export const getServerSideProps = async (ctx) => {
 };
 
 export default function Home({}) {
-  return <Layout>Home</Layout>;
+  return (
+    <Layout>
+      <CategoriesGrid />
+    </Layout>
+  );
 }

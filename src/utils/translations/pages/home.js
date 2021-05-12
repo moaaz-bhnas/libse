@@ -12,6 +12,7 @@ const translations = {
     favorites: "Favorites",
     toggleFav: "Toggle favorites panel",
     more: "More",
+    noRecentSearches: "No recent searches",
   },
   ar: {
     libse: "لبس",
@@ -26,6 +27,7 @@ const translations = {
     favorites: "القائمة المفضلة",
     toggleFav: "افتح/اغلق قائمة المفضلات",
     more: "أخرى",
+    noRecentSearches: "لا يوجد بحوثات مؤخراً",
   },
 };
 
